@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김문수 & 조자영 결혼합니다 ♥</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
 </head>
 <style>
+    body{
+        background: linear-gradient(0deg, #fff5ee, #deb887);
+    }
     .titleDiv {
         position: relative;
         width: 100%;
@@ -20,6 +24,7 @@
         text-align: center;
         color: white;
         margin: 20px 0 0 0;
+        z-index: 1;
     }
 
     .weekday {
@@ -28,49 +33,69 @@
         margin: 0;
     }
 
+    .thanks {
+        margin-top: 10px;
+    }
+
     .imgwrap {
         overflow: hidden;
+        position: absolute;
+        bottom:0px
     }
 
     .sec1img {
         width: 100%;
+        position: relative;
+        z-index: -1;
     }
 </style>
+<script>
+    var sound = new Howl({
+        src: ['./sound/test.mp3']
+    });
+    sound.play();
+</script>
 
 <body>
-
+    <div class="bgmcontrol"></div>
     <div id="fullpage">
-        <audio autoplay id="bgm">
-            <source src="./sound/test.mp3" type="audio/mpeg">
-        </audio>
-        <div class="section" style="background: linear-gradient(0deg, #fff5ee, #deb887);">
+        <div class="section">
+            <!-- <audio data-autoplay data-keepplaying id="bgm">
+                <source src="./sound/test.mp3" type="audio/mpeg">
+            </audio> -->
             <div class="titleDiv">
-                <h1 class="title date">2024 / 12 / 08</h1>
+                <h1 class="title">2024 / 12 / 08</h1>
                 <h2 class="weekday">SUNDAY</h2>
                 <div class="imgwrap">
                     <img class="sec1img" src="./img/test.png">
                 </div>
             </div>
         </div>
-        <div class="section" style="background: linear-gradient(0deg, #deb887,#fff5ee );">
-            <div>Section 2</div>
-            <div>감사인사 + 연락하기 버튼 -> 레이어창으로 이동</div>
+        <div class="section">
+            <div>
+                <h1 class="title thanks">감사인사</h1>
+            </div>
+
         </div>
-        <div class="section" style="background: linear-gradient(0deg, #fff5ee, #deb887);">
-            <div>Section 3</div>
-            <div>갤러리</div>
+        <div class="section">
+            <div>
+                <h1 class="title">갤러리</h1>
+            </div>
         </div>
-        <div class="section" style="background-color: blue;">
-            <div>Section 4</div>
-            <div>날짜 , 시간 + 달력 표시</div>
+        <div class="section" >
+            <div>
+                <h1 class="title">날짜 , 시간 + 달력 표시</h1>
+            </div>
         </div>
-        <div class="section" style="background-color: skyblue;">
-            <div>Section 5</div>
-            <div>오시는길 -> 주소 + 지도 </div>
+        <div class="section" >
+            <div>
+                <h1 class="title">오시는길 -> 주소 + 지도</h1>
+            </div>
         </div>
-        <div class="section" style="background-color: grey;">
-            <div>Section 6</div>
-            <div>방명록 </div>
+        <div class="section" >
+            <div>
+                <h1 class="title">방명록</h1>
+            </div>
         </div>
 
         <!-- Add more sections as needed -->
