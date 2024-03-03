@@ -4,37 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Page Scroll</title>
+    <title>김문수 & 조자영 결혼합니다 ♥</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css">
 </head>
 <style>
     .titleDiv {
         position: relative;
         width: 100%;
+        height: 100%;
         text-align: center;
+        overflow: hidden;
     }
-    .title{
-        text-align: center; 
-        position:absolute;
-        left:50%;
-        transform: translate( -50%, -50% );
-        color:white;
+
+    .title {
+        text-align: center;
+        color: white;
+        margin: 20px 0 0 0;
+    }
+
+    .weekday {
+        /* font: 2em sans-serif; */
+        color: white;
+        margin: 0;
+    }
+
+    .imgwrap {
+        overflow: hidden;
+    }
+
+    .sec1img {
+        width: 100%;
     }
 </style>
 
 <body>
+
     <div id="fullpage">
+        <audio autoplay id="bgm">
+            <source src="./sound/test.mp3" type="audio/mpeg">
+        </audio>
         <div class="section" style="background: linear-gradient(0deg, #fff5ee, #deb887);">
             <div class="titleDiv">
-                <h2 class="title" >청첩장 이올시다.</h2>
-                <img src="./img/test.png" style="width: 100%;">
+                <h1 class="title date">2024 / 12 / 08</h1>
+                <h2 class="weekday">SUNDAY</h2>
+                <div class="imgwrap">
+                    <img class="sec1img" src="./img/test.png">
+                </div>
             </div>
         </div>
-        <div class="section" style="background: linear-gradient(0deg, #F3F9A7,#ffc0cb );">
+        <div class="section" style="background: linear-gradient(0deg, #deb887,#fff5ee );">
             <div>Section 2</div>
             <div>감사인사 + 연락하기 버튼 -> 레이어창으로 이동</div>
         </div>
-        <div class="section" style="background: linear-gradient(0deg, #fff5ee,#D3CBB8 );">
+        <div class="section" style="background: linear-gradient(0deg, #fff5ee, #deb887);">
             <div>Section 3</div>
             <div>갤러리</div>
         </div>
@@ -60,6 +82,7 @@
             autoScrolling: true,
             scrollHorizontally: false,
             navigation: true,
+            scrollingSpeed: 900,
             // Add more configurations as needed
         });
     </script>
