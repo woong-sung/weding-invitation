@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'continuous';
+  src: url('../fonts/continuous.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MICEMyungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEMyungjo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+	font-family: 'MICEMyungjo';
+  background: linear-gradient(0deg, #fff5ee, #deb887);
+}
+.soundctl{
+  text-align: right;
+  height: 5px;
+  margin: 0px;
+}
+.titleDiv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin: 0 0 10px 0;
+  z-index: 1;
+}
+
+.weekday {
+  color: white;
+  margin: 0;
+}
+.btm-txt {
+  font-size: 1.5em;
+  position: absolute;
+  left: 50%;
+  bottom:0px;
+  transform: translate(-50%, -50%);
+  margin-bottom: 20%;
+}
+
+.thanks {
+  margin-top: 10px;
+}
+
+.imgwrap {
+  overflow: hidden;
+  position: absolute;
+  bottom:0px
+}
+
+.sec1img {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
